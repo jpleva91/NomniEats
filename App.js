@@ -34,7 +34,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Search />
+        <Text style={styles.title}>Woohoo! Starting from scratch again!</Text>
       </View>
     );
   }
@@ -43,8 +43,10 @@ export default class App extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
     position: 'relative',
     top: 24,
   },
+  title: {
+
+  }
 });

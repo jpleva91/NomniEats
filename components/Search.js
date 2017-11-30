@@ -12,7 +12,7 @@ import {
     Image
 } from 'react-native';
 import {
-    SearchBar, Button
+    SearchBar, Button, Card
 } from 'react-native-elements';
 
 import { API_KEY, APP_ID } from 'react-native-dotenv';
@@ -46,6 +46,23 @@ export default class Search extends Component<{}> {
                 },
                 {
                     "healthLabels": [
+                        "Vegan",
+                        "Vegetarian",
+                        "Peanut-Free",
+                        "Tree-Nut-Free"
+                    ],
+                    "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
+                    "ingredients": [
+                        "3 cups Coca-Cola",
+                        "3 tbsp. Fernet Branca",
+                        "3 tbsp. fresh orange juice",
+                        "Sliced oranges, for serving"
+                    ],
+                    "label": "Fernet And Coke Granita",
+                    "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
+                },
+                {
+                    "healthLabels": [
                         "Peanut-Free",
                         "Tree-Nut-Free",
                         "Alcohol-Free"
@@ -83,6 +100,23 @@ export default class Search extends Component<{}> {
                 },
                 {
                     "healthLabels": [
+                        "Vegan",
+                        "Vegetarian",
+                        "Peanut-Free",
+                        "Tree-Nut-Free"
+                    ],
+                    "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
+                    "ingredients": [
+                        "3 cups Coca-Cola",
+                        "3 tbsp. Fernet Branca",
+                        "3 tbsp. fresh orange juice",
+                        "Sliced oranges, for serving"
+                    ],
+                    "label": "Fernet And Coke Granita",
+                    "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
+                },
+                {
+                    "healthLabels": [
                         "Peanut-Free",
                         "Tree-Nut-Free",
                         "Alcohol-Free"
@@ -117,6 +151,23 @@ export default class Search extends Component<{}> {
                     ],
                     "label": "Boiled Coke with Ginger and Lemon Recipe",
                     "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
+                },
+                {
+                    "healthLabels": [
+                        "Vegan",
+                        "Vegetarian",
+                        "Peanut-Free",
+                        "Tree-Nut-Free"
+                    ],
+                    "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
+                    "ingredients": [
+                        "3 cups Coca-Cola",
+                        "3 tbsp. Fernet Branca",
+                        "3 tbsp. fresh orange juice",
+                        "Sliced oranges, for serving"
+                    ],
+                    "label": "Fernet And Coke Granita",
+                    "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
                 },
                 {
                     "healthLabels": [
@@ -375,7 +426,7 @@ render() {
   }
   renderRecipe(recipe){
       return(
-        <View style={styles.container}>
+        <Card containerStyle={{padding: 0}} >
             <Image
                 source={{url: recipe.image}}
                 style={styles.thumbnail}
@@ -383,7 +434,7 @@ render() {
             <View style={styles.rightContainer}>
                 <Text style={styles.title}>{recipe.label}</Text>
             </View>
-        </View>
+        </Card>
       );
   }
 }
@@ -405,26 +456,25 @@ const styles = StyleSheet.create({
         color: 'orange',
     },
     buttonStyle: {
-        backgroundColor: 'orange',
+        backgroundColor: '#9A031E',
         position: 'relative',
-        top: 20,
+        top: 16,
     },
     rightContainer: {
         flex: 1,
     },
     title: {
         fontSize: 16,
-        marginBottom: 8,
-        textAlign: 'center',
+        margin: 8,
+        color: '#CB793A'
     },
     listView: {
-        paddingTop: 20,
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#321325',
         position: 'relative',
-        top: 40,
+        top: 30,
     },
     thumbnail: {
-        width: 53,
-        height: 81,
+        width: 100,
+        height: 100,
     },
 });
