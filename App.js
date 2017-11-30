@@ -11,7 +11,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  FlatList
 } from 'react-native';
 
 import { SearchBar, Button } from 'react-native-elements';
@@ -69,6 +70,7 @@ export default class App extends Component<{}> {
           {this.state.text}
           {this.state.data}
         </Text>
+        
       </View>
     );
   }
