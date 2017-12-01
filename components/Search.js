@@ -27,316 +27,316 @@ export default class Search extends Component<{}> {
             data: [],
             text: '',
             recipes: [
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
-                    "ingredients": [
-                        "1 can Coke (12 ounces)",
-                        "1 inch chunk ginger, peeled and thinly sliced",
-                        "1/2 lemon, sliced into rounds"
-                    ],
-                    "label": "Boiled Coke with Ginger and Lemon Recipe",
-                    "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
-                    "ingredients": [
-                        "3 cups Coca-Cola",
-                        "3 tbsp. Fernet Branca",
-                        "3 tbsp. fresh orange juice",
-                        "Sliced oranges, for serving"
-                    ],
-                    "label": "Fernet And Coke Granita",
-                    "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
-                },
-                {
-                    "healthLabels": [
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
-                    "ingredients": [
-                        "2-3 lbs slab of smoked bacon with skin",
-                        "3 Tbs cherry jam",
-                        "1/4 C dried cherries",
-                        "1 vanilla bean split in half lengthwise",
-                        "15 whole cloves",
-                        "2 liter bottle of Coke",
-                        "1 Granny Smith apple peeled and sliced",
-                        "1 small head of cabbage cored and shredded"
-                    ],
-                    "label": "Cherry Coke Braised Bacon",
-                    "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
-                    "ingredients": [
-                        "1 can Coke (12 ounces)",
-                        "1 inch chunk ginger, peeled and thinly sliced",
-                        "1/2 lemon, sliced into rounds"
-                    ],
-                    "label": "Boiled Coke with Ginger and Lemon Recipe",
-                    "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
-                    "ingredients": [
-                        "3 cups Coca-Cola",
-                        "3 tbsp. Fernet Branca",
-                        "3 tbsp. fresh orange juice",
-                        "Sliced oranges, for serving"
-                    ],
-                    "label": "Fernet And Coke Granita",
-                    "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
-                },
-                {
-                    "healthLabels": [
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
-                    "ingredients": [
-                        "2-3 lbs slab of smoked bacon with skin",
-                        "3 Tbs cherry jam",
-                        "1/4 C dried cherries",
-                        "1 vanilla bean split in half lengthwise",
-                        "15 whole cloves",
-                        "2 liter bottle of Coke",
-                        "1 Granny Smith apple peeled and sliced",
-                        "1 small head of cabbage cored and shredded"
-                    ],
-                    "label": "Cherry Coke Braised Bacon",
-                    "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
-                    "ingredients": [
-                        "1 can Coke (12 ounces)",
-                        "1 inch chunk ginger, peeled and thinly sliced",
-                        "1/2 lemon, sliced into rounds"
-                    ],
-                    "label": "Boiled Coke with Ginger and Lemon Recipe",
-                    "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
-                    "ingredients": [
-                        "3 cups Coca-Cola",
-                        "3 tbsp. Fernet Branca",
-                        "3 tbsp. fresh orange juice",
-                        "Sliced oranges, for serving"
-                    ],
-                    "label": "Fernet And Coke Granita",
-                    "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
-                },
-                {
-                    "healthLabels": [
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
-                    "ingredients": [
-                        "2-3 lbs slab of smoked bacon with skin",
-                        "3 Tbs cherry jam",
-                        "1/4 C dried cherries",
-                        "1 vanilla bean split in half lengthwise",
-                        "15 whole cloves",
-                        "2 liter bottle of Coke",
-                        "1 Granny Smith apple peeled and sliced",
-                        "1 small head of cabbage cored and shredded"
-                    ],
-                    "label": "Cherry Coke Braised Bacon",
-                    "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
-                    "ingredients": [
-                        "1 can Coke (12 ounces)",
-                        "1 inch chunk ginger, peeled and thinly sliced",
-                        "1/2 lemon, sliced into rounds"
-                    ],
-                    "label": "Boiled Coke with Ginger and Lemon Recipe",
-                    "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
-                },
-                {
-                    "healthLabels": [
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
-                    "ingredients": [
-                        "2-3 lbs slab of smoked bacon with skin",
-                        "3 Tbs cherry jam",
-                        "1/4 C dried cherries",
-                        "1 vanilla bean split in half lengthwise",
-                        "15 whole cloves",
-                        "2 liter bottle of Coke",
-                        "1 Granny Smith apple peeled and sliced",
-                        "1 small head of cabbage cored and shredded"
-                    ],
-                    "label": "Cherry Coke Braised Bacon",
-                    "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
-                    "ingredients": [
-                        "1 can Coke (12 ounces)",
-                        "1 inch chunk ginger, peeled and thinly sliced",
-                        "1/2 lemon, sliced into rounds"
-                    ],
-                    "label": "Boiled Coke with Ginger and Lemon Recipe",
-                    "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
-                },
-                {
-                    "healthLabels": [
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
-                    "ingredients": [
-                        "2-3 lbs slab of smoked bacon with skin",
-                        "3 Tbs cherry jam",
-                        "1/4 C dried cherries",
-                        "1 vanilla bean split in half lengthwise",
-                        "15 whole cloves",
-                        "2 liter bottle of Coke",
-                        "1 Granny Smith apple peeled and sliced",
-                        "1 small head of cabbage cored and shredded"
-                    ],
-                    "label": "Cherry Coke Braised Bacon",
-                    "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
-                    "ingredients": [
-                        "1 can Coke (12 ounces)",
-                        "1 inch chunk ginger, peeled and thinly sliced",
-                        "1/2 lemon, sliced into rounds"
-                    ],
-                    "label": "Boiled Coke with Ginger and Lemon Recipe",
-                    "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
-                },
-                {
-                    "healthLabels": [
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
-                    "ingredients": [
-                        "2-3 lbs slab of smoked bacon with skin",
-                        "3 Tbs cherry jam",
-                        "1/4 C dried cherries",
-                        "1 vanilla bean split in half lengthwise",
-                        "15 whole cloves",
-                        "2 liter bottle of Coke",
-                        "1 Granny Smith apple peeled and sliced",
-                        "1 small head of cabbage cored and shredded"
-                    ],
-                    "label": "Cherry Coke Braised Bacon",
-                    "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
-                },
-                {
-                    "healthLabels": [
-                        "Vegan",
-                        "Vegetarian",
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
-                    "ingredients": [
-                        "1 can Coke (12 ounces)",
-                        "1 inch chunk ginger, peeled and thinly sliced",
-                        "1/2 lemon, sliced into rounds"
-                    ],
-                    "label": "Boiled Coke with Ginger and Lemon Recipe",
-                    "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
-                },
-                {
-                    "healthLabels": [
-                        "Peanut-Free",
-                        "Tree-Nut-Free",
-                        "Alcohol-Free"
-                    ],
-                    "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
-                    "ingredients": [
-                        "2-3 lbs slab of smoked bacon with skin",
-                        "3 Tbs cherry jam",
-                        "1/4 C dried cherries",
-                        "1 vanilla bean split in half lengthwise",
-                        "15 whole cloves",
-                        "2 liter bottle of Coke",
-                        "1 Granny Smith apple peeled and sliced",
-                        "1 small head of cabbage cored and shredded"
-                    ],
-                    "label": "Cherry Coke Braised Bacon",
-                    "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
-                }
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
+                //     "ingredients": [
+                //         "1 can Coke (12 ounces)",
+                //         "1 inch chunk ginger, peeled and thinly sliced",
+                //         "1/2 lemon, sliced into rounds"
+                //     ],
+                //     "label": "Boiled Coke with Ginger and Lemon Recipe",
+                //     "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
+                //     "ingredients": [
+                //         "3 cups Coca-Cola",
+                //         "3 tbsp. Fernet Branca",
+                //         "3 tbsp. fresh orange juice",
+                //         "Sliced oranges, for serving"
+                //     ],
+                //     "label": "Fernet And Coke Granita",
+                //     "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
+                //     "ingredients": [
+                //         "2-3 lbs slab of smoked bacon with skin",
+                //         "3 Tbs cherry jam",
+                //         "1/4 C dried cherries",
+                //         "1 vanilla bean split in half lengthwise",
+                //         "15 whole cloves",
+                //         "2 liter bottle of Coke",
+                //         "1 Granny Smith apple peeled and sliced",
+                //         "1 small head of cabbage cored and shredded"
+                //     ],
+                //     "label": "Cherry Coke Braised Bacon",
+                //     "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
+                //     "ingredients": [
+                //         "1 can Coke (12 ounces)",
+                //         "1 inch chunk ginger, peeled and thinly sliced",
+                //         "1/2 lemon, sliced into rounds"
+                //     ],
+                //     "label": "Boiled Coke with Ginger and Lemon Recipe",
+                //     "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
+                //     "ingredients": [
+                //         "3 cups Coca-Cola",
+                //         "3 tbsp. Fernet Branca",
+                //         "3 tbsp. fresh orange juice",
+                //         "Sliced oranges, for serving"
+                //     ],
+                //     "label": "Fernet And Coke Granita",
+                //     "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
+                //     "ingredients": [
+                //         "2-3 lbs slab of smoked bacon with skin",
+                //         "3 Tbs cherry jam",
+                //         "1/4 C dried cherries",
+                //         "1 vanilla bean split in half lengthwise",
+                //         "15 whole cloves",
+                //         "2 liter bottle of Coke",
+                //         "1 Granny Smith apple peeled and sliced",
+                //         "1 small head of cabbage cored and shredded"
+                //     ],
+                //     "label": "Cherry Coke Braised Bacon",
+                //     "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
+                //     "ingredients": [
+                //         "1 can Coke (12 ounces)",
+                //         "1 inch chunk ginger, peeled and thinly sliced",
+                //         "1/2 lemon, sliced into rounds"
+                //     ],
+                //     "label": "Boiled Coke with Ginger and Lemon Recipe",
+                //     "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/a09/a09c8f81de6240ef58bdcb70e83827de.jpg",
+                //     "ingredients": [
+                //         "3 cups Coca-Cola",
+                //         "3 tbsp. Fernet Branca",
+                //         "3 tbsp. fresh orange juice",
+                //         "Sliced oranges, for serving"
+                //     ],
+                //     "label": "Fernet And Coke Granita",
+                //     "preparation": "http://www.saveur.com/article/Recipes/Fernet-And-Coke-Granita"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
+                //     "ingredients": [
+                //         "2-3 lbs slab of smoked bacon with skin",
+                //         "3 Tbs cherry jam",
+                //         "1/4 C dried cherries",
+                //         "1 vanilla bean split in half lengthwise",
+                //         "15 whole cloves",
+                //         "2 liter bottle of Coke",
+                //         "1 Granny Smith apple peeled and sliced",
+                //         "1 small head of cabbage cored and shredded"
+                //     ],
+                //     "label": "Cherry Coke Braised Bacon",
+                //     "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
+                //     "ingredients": [
+                //         "1 can Coke (12 ounces)",
+                //         "1 inch chunk ginger, peeled and thinly sliced",
+                //         "1/2 lemon, sliced into rounds"
+                //     ],
+                //     "label": "Boiled Coke with Ginger and Lemon Recipe",
+                //     "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
+                //     "ingredients": [
+                //         "2-3 lbs slab of smoked bacon with skin",
+                //         "3 Tbs cherry jam",
+                //         "1/4 C dried cherries",
+                //         "1 vanilla bean split in half lengthwise",
+                //         "15 whole cloves",
+                //         "2 liter bottle of Coke",
+                //         "1 Granny Smith apple peeled and sliced",
+                //         "1 small head of cabbage cored and shredded"
+                //     ],
+                //     "label": "Cherry Coke Braised Bacon",
+                //     "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
+                //     "ingredients": [
+                //         "1 can Coke (12 ounces)",
+                //         "1 inch chunk ginger, peeled and thinly sliced",
+                //         "1/2 lemon, sliced into rounds"
+                //     ],
+                //     "label": "Boiled Coke with Ginger and Lemon Recipe",
+                //     "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
+                //     "ingredients": [
+                //         "2-3 lbs slab of smoked bacon with skin",
+                //         "3 Tbs cherry jam",
+                //         "1/4 C dried cherries",
+                //         "1 vanilla bean split in half lengthwise",
+                //         "15 whole cloves",
+                //         "2 liter bottle of Coke",
+                //         "1 Granny Smith apple peeled and sliced",
+                //         "1 small head of cabbage cored and shredded"
+                //     ],
+                //     "label": "Cherry Coke Braised Bacon",
+                //     "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
+                //     "ingredients": [
+                //         "1 can Coke (12 ounces)",
+                //         "1 inch chunk ginger, peeled and thinly sliced",
+                //         "1/2 lemon, sliced into rounds"
+                //     ],
+                //     "label": "Boiled Coke with Ginger and Lemon Recipe",
+                //     "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
+                //     "ingredients": [
+                //         "2-3 lbs slab of smoked bacon with skin",
+                //         "3 Tbs cherry jam",
+                //         "1/4 C dried cherries",
+                //         "1 vanilla bean split in half lengthwise",
+                //         "15 whole cloves",
+                //         "2 liter bottle of Coke",
+                //         "1 Granny Smith apple peeled and sliced",
+                //         "1 small head of cabbage cored and shredded"
+                //     ],
+                //     "label": "Cherry Coke Braised Bacon",
+                //     "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Vegan",
+                //         "Vegetarian",
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
+                //     "ingredients": [
+                //         "1 can Coke (12 ounces)",
+                //         "1 inch chunk ginger, peeled and thinly sliced",
+                //         "1/2 lemon, sliced into rounds"
+                //     ],
+                //     "label": "Boiled Coke with Ginger and Lemon Recipe",
+                //     "preparation": "http://www.seriouseats.com/recipes/2013/04/boiled-coke-ginger-lemon-hong-kong-recipe.html"
+                // },
+                // {
+                //     "healthLabels": [
+                //         "Peanut-Free",
+                //         "Tree-Nut-Free",
+                //         "Alcohol-Free"
+                //     ],
+                //     "image": "https://www.edamam.com/web-img/3aa/3aa2da863d7316f12a74a47477a567f7.jpg",
+                //     "ingredients": [
+                //         "2-3 lbs slab of smoked bacon with skin",
+                //         "3 Tbs cherry jam",
+                //         "1/4 C dried cherries",
+                //         "1 vanilla bean split in half lengthwise",
+                //         "15 whole cloves",
+                //         "2 liter bottle of Coke",
+                //         "1 Granny Smith apple peeled and sliced",
+                //         "1 small head of cabbage cored and shredded"
+                //     ],
+                //     "label": "Cherry Coke Braised Bacon",
+                //     "preparation": "http://norecipes.com/blog/2008/03/23/cherry-coke-braised-bacon/"
+                // }
             ],
             label: '',
             dataSource: new ListView.DataSource({
@@ -365,52 +365,52 @@ render() {
           value={this.state.text}/>
         <Button
           onPress={() => {
-            // fetch(`https://api.edamam.com/search?q=${this.state.text}&app_id=${app}&app_key=${api}&from=0&to=10`)
-            //   .then((response) => response.json())
-            //   .then((responseJson) => {
-            //     let recipes = [];
-            //     for(let i = 0; i < responseJson.hits.length; i++) {
-            //         recipes.push(responseJson.hits[i].recipe);
-            //     }
-            //     this.setState({
-            //         data: recipes
-            //     }, function() {
-            //       // do something with new state
-            //       let post = this.state.data
-            //       for(let i = 0; i < post.length; i++) {
-            //         fetch('https://nomnieats.firebaseio.com/.json/', {  
-            //             method: 'POST',
-            //             headers: {
-            //               'Accept': 'application/json',
-            //               'Content-Type': 'application/json',
-            //             },
-            //             body: JSON.stringify({
-            //                 healthLabels: post[i].healthLabels,
-            //                 cautions: post[i].cautions,
-            //                 ingredients: post[i].ingredientLines,
-            //                 label: post[i].label,
-            //                 image: post[i].image,
-            //                 preparation: post[i].url
-            //             })
-            //           })
-            //           this.state.recipes.push({
-            //             healthLabels: post[i].healthLabels,
-            //             cautions: post[i].cautions,
-            //             ingredients: post[i].ingredientLines,
-            //             label: post[i].label,
-            //             image: post[i].image,
-            //             preparation: post[i].url
-            //           })
-            //         console.log(this.state.recipes)
-            //           this.setState({
-            //             dataSource: this.state.dataSource.cloneWithRows(this.state.recipes),
-            //           });
-            //       }
-            //     });
-            //   })
-            //   .catch((error) => {
-            //     console.error(error);
-            //   });
+            fetch(`https://api.edamam.com/search?q=${this.state.text}&app_id=${app}&app_key=${api}&from=0&to=30`)
+              .then((response) => response.json())
+              .then((responseJson) => {
+                let recipes = [];
+                for(let i = 0; i < responseJson.hits.length; i++) {
+                    recipes.push(responseJson.hits[i].recipe);
+                }
+                this.setState({
+                    data: recipes
+                }, function() {
+                  // do something with new state
+                  let post = this.state.data
+                  for(let i = 0; i < post.length; i++) {
+                    fetch('https://nomnieats.firebaseio.com/.json/', {  
+                        method: 'POST',
+                        headers: {
+                          'Accept': 'application/json',
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            healthLabels: post[i].healthLabels,
+                            cautions: post[i].cautions,
+                            ingredients: post[i].ingredientLines,
+                            label: post[i].label,
+                            image: post[i].image,
+                            preparation: post[i].url
+                        })
+                      })
+                      this.state.recipes.push({
+                        healthLabels: post[i].healthLabels,
+                        cautions: post[i].cautions,
+                        ingredients: post[i].ingredientLines,
+                        label: post[i].label,
+                        image: post[i].image,
+                        preparation: post[i].url
+                      })
+                    console.log(this.state.recipes)
+                      this.setState({
+                        dataSource: this.state.dataSource.cloneWithRows(this.state.recipes),
+                      });
+                  }
+                });
+              })
+              .catch((error) => {
+                console.error(error);
+              });
           }}
           large
           icon={{name: 'cutlery', type: 'font-awesome'}}

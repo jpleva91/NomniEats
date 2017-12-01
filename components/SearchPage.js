@@ -10,10 +10,66 @@ import {
   ActivityIndicator,
   Image,
 } from 'react-native';
+import { API_KEY, APP_ID } from 'react-native-dotenv';
+
+let api = API_KEY;
+let app = APP_ID;
+
+function urlForQueryAndPage(key, value) {
+  const data = {
+    app_id: app,
+    app_key: api,
+  };
+  data[key] = value;
+
+  const querystring = Object.keys(data)
+    .map(key => key + '=' + encodeURIComponent(data[key]))
+    .join('&');
+
+  return 'https://api.edamam.com/search?' + querystring;
+}
 
 export default class SearchPage extends Component<{}> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchString: 'tofu',
+      isLoading: false,
+      message: '',
+    };
+  }
+  _onSearchTextChanged = (event) => {
+    this.setState({ searchString: event.nativeEvent.text });
+  };
+  _executeQuery = (query) => {
+    console.log('query:',query);
+    this.setState({ isLoading: true });
+    fetch(query)
+      .then(response => response.json())
+      .then(json => this._handleResponse(json))
+      .catch(error =>
+        this.setState({
+          isLoading: false,
+          message: 'Something bad happened ' + error
+        }));
+  };
+  _onSearchPressed = () => {
+    const query = urlForQueryAndPage('q', this.state.searchString);
+    this._executeQuery(query);
+  };
+  _handleResponse = (response) => {
+    this.setState({ isLoading: false, message: '' })
+    console.log(response.count);
+    if (response.count > 1) {
+      console.log('Recipes found: ' + response.hits.length);
+    } else {
+      this.setState({ message: 'Input not recognized; please try again.'});
+    };
+  }
 
   render() {
+    const spinner = this.state.isLoading ?
+    <ActivityIndicator size ='large' /> : null;
     return (
       <View style={styles.container}>
         <Text style={styles.description}>
@@ -25,14 +81,18 @@ export default class SearchPage extends Component<{}> {
         <View style={styles.flowRight}>
           <TextInput
             style={styles.searchInput}
+            value={this.state.searchString}
+            onChange={this._onSearchTextChanged}
             placeholder='Search via food name or style' />
           <Button
-            onPress={() => {}}
+            onPress={this._onSearchPressed}
             color='#48BBEC'
             title='Go'
           />
         </View>
-        <Image source={require('../Resources/cooking.png')} style={styles.image} />
+        <Image source={require('../Resources/hungry-cat.png')} style={styles.image} />
+        {spinner}
+        <Text style={styles.description}>{this.state.message}</Text>
       </View>
     );
   }
@@ -49,7 +109,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 30,
     marginTop: 65,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   flowRight: {
     flexDirection: 'row',
@@ -68,8 +128,8 @@ const styles = StyleSheet.create({
     color: '#48BBEC',
   },
   image: {
-    marginTop: 36,
-    width: 434,
-    height: 276,
+    marginTop: 18,
+    width: 217,
+    height: 217,
   },
 });
