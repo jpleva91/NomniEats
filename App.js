@@ -4,49 +4,37 @@
  * @flow
  */
 
+'use strict'
+ 
 import React, { Component } from 'react';
+
 import {
-  ActivityIndicator,
-  ListView,
   Platform,
   StyleSheet,
   Text,
   View,
-	Dimensions,
+  NavigatorIOS
 } from 'react-native';
 
-import Search from './components/Search';
-
-import { SearchBar, Button } from 'react-native-elements';
-
+import SearchPage from './components/SearchPage';
 
 export default class App extends Component<{}> {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
-
-  componentDidMount() {
-    console.groupCollapsed
-  }
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Woohoo! Starting from scratch again!</Text>
-      </View>
+        <NavigatorIOS
+          style={styles.container}
+          initialRoute={{
+            title: 'NomniEats',
+            component: SearchPage,
+          }}/>
     );
   }
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    position: 'relative',
-    top: 24,
-  },
-  title: {
-
   }
 });
