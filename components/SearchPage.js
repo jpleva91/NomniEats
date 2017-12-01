@@ -11,6 +11,7 @@ import {
   Image,
 } from 'react-native';
 import { API_KEY, APP_ID } from 'react-native-dotenv';
+import SearchResults from './SearchResults';
 
 let api = API_KEY;
 let app = APP_ID;
@@ -61,7 +62,12 @@ export default class SearchPage extends Component<{}> {
     this.setState({ isLoading: false, message: '' })
     console.log(response.count);
     if (response.count > 1) {
-      console.log('Recipes found: ' + response.hits.length);
+      console.log({recipes: response.hits})
+      this.props.navigator.push({
+        title: 'Results',
+        component: SearchResults,
+        passProps: {recipes: response.hits}
+      });
     } else {
       this.setState({ message: 'Input not recognized; please try again.'});
     };
