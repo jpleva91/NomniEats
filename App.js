@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 
 import SearchPage from './components/SearchPage';
+import RecipeView from './components/RecipeView';
 
 export default class App extends Component<{}> {
 
@@ -26,7 +27,7 @@ export default class App extends Component<{}> {
           style={styles.container}
           initialRoute={{
             title: 'NomniEats',
-            component: SearchPage,
+            component: RecipeView,
           }}/>
     );
   }
