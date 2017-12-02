@@ -13,12 +13,14 @@ import {
   StyleSheet,
   Text,
   View,
-  NavigatorIOS
+  NavigatorIOS,
+  Image
 } from 'react-native';
 
 import Config from 'react-native-config';
 import firebase from 'firebase';
 
+import LoginForm from './components/LoginForm';
 import SearchPage from './components/SearchPage';
 import RecipeView from './components/RecipeView';
 
@@ -36,19 +38,38 @@ export default class App extends Component<{}> {
 
   render() {
     return (
-        <NavigatorIOS
-          style={styles.container}
-          initialRoute={{
-            title: 'NomniEats',
-            component: SearchPage,
-          }}/>
+      <View style={styles.container}>
+        <Text style={styles.description}>
+          Search for recipes!
+        </Text>
+        <LoginForm />
+        <View style={styles.center}>
+          <Image source={require('./Resources/hungry-cat.png')} style={styles.image} />
+        </View>
+      </View>
     );
   }
 }
 
 
 const styles = StyleSheet.create({
+  description: {
+    marginBottom: 20,
+    fontSize: 18,
+    textAlign: 'center',
+    color: '#656565'
+  },
   container: {
+    padding: 30,
+    marginTop: 65,
     flex: 1,
+  },
+  image: {
+    marginTop: 18,
+    width: 217,
+    height: 217,
+  },
+  center: {
+    alignItems: 'center',
   }
 });

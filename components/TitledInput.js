@@ -34,19 +34,21 @@ const styles = {
     fontWeight: '200',
     flex: 1,
     height: 40
-  },
-  labelStyle: {
+},
+labelStyle: {
     fontSize: 12,
     color: '#7F7D7D',
     fontWeight: '200',
     flex: 1
-  },
-  containerStyle: {
+},
+containerStyle: {
     height: 45,
     flexDirection: 'column',
-      alignItems: 'flex-start',
-      width: '100%',
-      borderColor: '#D4D4D4',
+     alignItems: 'flex-start',
+     width: '100%',
+     borderColor: '#D4D4D4',
     borderBottomWidth: 1,
-  }
+}
 };
+
+export { TitledInput };
