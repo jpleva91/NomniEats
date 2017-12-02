@@ -28,7 +28,7 @@ class ListItem extends React.PureComponent {
         <View style={styles.textContainer}>
           <Text style={styles.label}>{item.recipe.label}</Text>
           <Text style={styles.healthLabels}
-            numberOfLines={1}>{" " + item.recipe.healthLabels + ","}</Text>
+            numberOfLines={3}>{" " + item.recipe.healthLabels.join(", ")}</Text>
           </View>
         </View>
         <View style={styles.separator}/>
