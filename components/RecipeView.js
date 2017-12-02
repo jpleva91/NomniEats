@@ -7,14 +7,18 @@ import {
   ScrollView,
   View,
   Text,
-  LinkingIOS,
-  Button
+  Button,
 } from 'react-native';
 import IngredientConverter from './IngredientConverter';
+import RecipeWebView from './RecipeWebView';
 
 export default class RecipeView extends Component<{}> {
   _onRecipePressed = () => {
-    console.log("Recipe Button Pressed");
+    this.props.navigator.push({
+      title: "Recipe Web View",
+      component: RecipeWebView,
+      passProps: {recipe: this.props.recipe.recipe}
+    });
   };
   _onIngredientsPressed = () => {
     this.props.navigator.push({
