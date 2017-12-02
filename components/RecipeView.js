@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#DDDDDD'
   },
   image: {
-    width: 400,
+    width: 420,
     height: 300
   },
   label: {

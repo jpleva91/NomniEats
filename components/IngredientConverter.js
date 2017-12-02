@@ -39,20 +39,23 @@ export default class IngredientConverter extends Component <{}> {
     isVegetarian ? console.log("This is already vegetarian") : this.convertVegetarian(vegetarian);
   };
   convertVegetarian(vegetarian) {
-    let chickenSubs = ['Piece(s) of Tofu','Portabella Mushroom(s)','Bell Pepper(s)','Piece(s) of Tempeh','Piece(s) of Seitan','Piece(s) of Eggplant', 'Potato(s)', 'Cauliflower Steak(s)'];
+    let chickenSubs = ['Piece(s) of Tofu','Large Portabella Mushroom(s)','Bell Pepper(s)','Piece(s) of Tempeh','Piece(s) of Seitan','Piece(s) of Eggplant', 'Potato(s)', 'Cauliflower Steak(s)'];
     let beefSubs = ['Portabella Mushroom(s)','Seitan','Black Bean Burger(s)', 'Jack Fruit'];
     let newRecipe = [];
     vegetarian.ingredientLines.forEach(ingredientLine => {
      ingredientLine.split(' ').forEach(word => {
-       if(word.toUpperCase() === "SIRLOIN" || word.toUpperCase() === "POUNDS" || word.toUpperCase() === "POUND" || word.toUpperCase() === "HALVES" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "PIECES" || word.toUpperCase() === "BONELESS," || word.toUpperCase() === "ON" || word.toUpperCase() === "SKIN" || word.toUpperCase() === "BREASTS," || word.toUpperCase() === "THIGHS," || word.toUpperCase() === "WHOLE" || word.toUpperCase() === "BREASTS" || word.toUpperCase() === "BONELESS" || word.toUpperCase() === "(BONELESS)" || word.toUpperCase() === "SKINLESS"|| word.toUpperCase() === "BREAST" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "THIGHS" || word.toUpperCase() === "WINGS" || word.toUpperCase() === "AND" || word.toUpperCase() === "SKIN-ON"|| word.toUpperCase() === "SKIN-ON,"|| word.toUpperCase() === "FILLETED" || word.toUpperCase() === "FILET"||  word.toUpperCase() === "FILLET" || word.toUpperCase() === "LEGS") {
+       if(word.toUpperCase() === "DRUMSTICKS" || word.toUpperCase() === "QUARTERED" || word.toUpperCase() === "HALVES," || word.toUpperCase() === "TENDERS" || word.toUpperCase() === "SIRLOIN" || word.toUpperCase() === "POUNDS" || word.toUpperCase() === "POUND" || word.toUpperCase() === "HALVES" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "PIECES" || word.toUpperCase() === "BONELESS," || word.toUpperCase() === "ON" || word.toUpperCase() === "SKIN" || word.toUpperCase() === "BREASTS," || word.toUpperCase() === "THIGHS," || word.toUpperCase() === "(THIGHS" || word.toUpperCase() === "WHOLE" || word.toUpperCase() === "BREASTS" || word.toUpperCase() === "BONELESS" || word.toUpperCase() === "(BONELESS)" || word.toUpperCase() === "SKINLESS"|| word.toUpperCase() === "BREAST" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "THIGHS" || word.toUpperCase() === "WINGS," || word.toUpperCase() === "WINGS" || word.toUpperCase() === "AND" || word.toUpperCase() === "SKIN-ON"|| word.toUpperCase() === "SKIN-ON,"||word.toUpperCase() === "FILLETS" || word.toUpperCase() === "FILLETED" || word.toUpperCase() === "FILET"||  word.toUpperCase() === "FILLET" || word.toUpperCase() === "LEGS" || word.toUpperCase() === "LEGS)")
+       {
          word = "";
        }
-       if(word.toUpperCase() === "CHICKEN"  || word.toUpperCase() === "CHICKEN,"|| word.toUpperCase() === "CHICKENS," || word.toUpperCase() === "CHICKENS") {
+       if(word.toUpperCase() === "CHICKEN"  || word.toUpperCase() === "CHICKEN,"|| word.toUpperCase() === "CHICKENS," || word.toUpperCase() === "CHICKENS")
+       {
          word = chickenSubs[
           Math.floor(Math.random() * (chickenSubs.length))
          ];
        }
-       if (word.toUpperCase() === "BEEF" || word.toUpperCase() === "BEEF," || word.toUpperCase() === "STEAK" || word.toUpperCase() === "STEAK," || word.toUpperCase() === "MIGNON") {
+       if (word.toUpperCase() === "BEEF" || word.toUpperCase() === "BEEF," || word.toUpperCase() === "STEAK" || word.toUpperCase() === "STEAK," || word.toUpperCase() === "MIGNON")
+       {
         word = beefSubs[
           Math.floor(Math.random() * (beefSubs.length))
          ];
@@ -140,7 +143,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#DDDDDD'
   },
   image: {
-    width: 400,
+    width: 420,
     height: 300
   },
   label: {
