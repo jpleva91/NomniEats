@@ -27,7 +27,7 @@ export default class App extends Component<{}> {
           style={styles.container}
           initialRoute={{
             title: 'NomniEats',
-            component: RecipeView,
+            component: SearchPage,
           }}/>
     );
   }

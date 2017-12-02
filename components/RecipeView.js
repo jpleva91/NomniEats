@@ -12,62 +12,6 @@ import {
 } from 'react-native';
 import IngredientConverter from './IngredientConverter';
 
-const recipe = {
-  "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_5c16802dd815e76ce94487b567073877",
-  "label": "Creamy Tofu Sauce Recipe",
-  "image": "https://www.edamam.com/web-img/011/011e89b0cbb9c4c20b765bd02b6c8525.jpg",
-  "source": "Serious Eats",
-  "url": "http://www.seriouseats.com/recipes/2011/02/creamy-tofu-sauce-recipe.html",
-  "shareAs": "http://www.edamam.com/recipe/creamy-tofu-sauce-recipe-5c16802dd815e76ce94487b567073877/tofu",
-  "yield": 2,
-  "dietLabels": [
-      "Low-Carb"
-  ],
-  "healthLabels": [
-      "Sugar-Conscious",
-      "Vegan",
-      "Vegetarian",
-      "Peanut-Free",
-      "Tree-Nut-Free",
-      "Alcohol-Free"
-  ],
-  "cautions": [
-      "Gluten",
-      "Wheat"
-  ],
-  "tags": [
-      "Asian",
-      "mirin",
-      "miso",
-      "salad dressings",
-      "tofu"
-  ],
-  "ingredientLines": [
-      "1/4 to 1/3 large block silken or firm tofu, about 4 ounces",
-      "2 teaspoons sweet, light miso, preferably Saikyo miso",
-      "Pinch of salt",
-      "Drop of mirin"
-  ],
-  "ingredients": [
-      {
-          "text": "1/4 to 1/3 large block silken or firm tofu, about 4 ounces",
-          "weight": 118.125
-      },
-      {
-          "text": "2 teaspoons sweet, light miso, preferably Saikyo miso",
-          "weight": 11.623570442199707
-      },
-      {
-          "text": "Pinch of salt",
-          "weight": 0.75
-      },
-      {
-          "text": "Drop of mirin",
-          "weight": 0.061499252915382385
-      }
-  ]
-}
-
 export default class RecipeView extends Component<{}> {
   _onRecipePressed = () => {
     console.log("Recipe Button Pressed");
@@ -76,12 +20,12 @@ export default class RecipeView extends Component<{}> {
     this.props.navigator.push({
       title: "Ingredient Converter",
       component: IngredientConverter,
-      passProps: {recipe: recipe}
+      passProps: {recipe: this.props.recipe.recipe}
     });
   }
   
   render() {
-    
+    const recipe = this.props.recipe.recipe;
     let healthLabels = recipe.healthLabels.join(', ')
     let ingredients = recipe.ingredientLines.join('\n\n');
     return (
