@@ -8,8 +8,10 @@
 	},
 	"dependencies": {
 		"dotenv": "^4.0.0",
+		"firebase": "^4.7.0",
 		"react": "16.0.0",
 		"react-native": "0.50.4",
+		"react-native-config": "^0.10.0",
 		"react-native-dotenv": "^0.1.0",
 		"react-native-elements": "^0.18.4",
 		"react-native-vector-icons": "^4.4.2"
