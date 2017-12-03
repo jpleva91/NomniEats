@@ -14,7 +14,7 @@ const TitledInput =({ label, value, onChangeText, placeholder, secureTextEntry})
       <Text style={labelStyle}>{label.toUpperCase()}</Text>
       <TextInput
         autoCorrect={false}
-        placeholde={placeholder}
+        placeholder={placeholder}
         secureTextEntry={secureTextEntry}
         value={value}
         onChangeText={onChangeText}
@@ -51,4 +51,4 @@ containerStyle: {
 }
 };
 
-export { TitledInput };
+export default TitledInput;

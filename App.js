@@ -53,7 +53,7 @@ export default class App extends Component<{}> {
 
 
 const styles = StyleSheet.create({
-  description: {
+    description: {
     marginBottom: 20,
     fontSize: 18,
     textAlign: 'center',
