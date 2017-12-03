@@ -16,7 +16,7 @@ export default class LoginForm extends Component<{}> {
       .then((res) => {
         this.setState({ error: '', loading: false });
         this.props.navigator.push({
-          title: 'NomniEats',
+          title: 'Search',
           component: SearchPage,
           passProps: {user: res}
         });
@@ -27,7 +27,7 @@ export default class LoginForm extends Component<{}> {
           .then((res) => {
             this.setState({ error: '', loading: false });
             this.props.navigator.push({
-              title: 'NomniEats',
+              title: 'Search',
               component: SearchPage,
               passProps: {user: this.state.user}
             });
@@ -46,8 +46,8 @@ export default class LoginForm extends Component<{}> {
   render() {
     return(
       <View style={styles.container}>
-      <Text style={styles.description}>
-        Search for recipes!
+      <Text style={styles.label}>
+        NomniEats
       </Text>
         <TitledInput
           label='Email Address'
@@ -66,18 +66,19 @@ export default class LoginForm extends Component<{}> {
         <Text style={styles.errorTextStyle}>{this.state.error}</Text>
         {this.renderButtonOrSpinner()}
         <View style={styles.center}>
-        <Image source={require('../Resources/hungry-cat.png')} style={styles.image} />
+        <Image source={require('../Resources/cooking.png')} style={styles.image} />
       </View>
       </View>
     );
   }
 }
 const styles ={
-  description: {
-    marginBottom: 20,
-    fontSize: 18,
+  label: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#48BBEC',
     textAlign: 'center',
-    color: '#656565'
+    paddingBottom: 30,
   },
   container: {
     padding: 30,
@@ -86,7 +87,7 @@ const styles ={
   },
   image: {
     marginTop: 18,
-    width: 217,
+    width: 380,
     height: 217,
   },
   center: {

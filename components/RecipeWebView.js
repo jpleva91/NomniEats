@@ -12,7 +12,6 @@ import {
 
 export default class RecipeWebView extends Component<{}> {
   render() {
-    console.log(this.props.recipe.url);
     const uri = this.props.recipe.url;
     return (
     <View style={styles.container}>

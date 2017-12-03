@@ -40,7 +40,7 @@ export default class App extends Component<{}> {
       <NavigatorIOS
       style={styles.container}
       initialRoute={{
-        title: 'NomniEats',
+        title: 'Login',
         component: LoginForm,
       }}/>
     );

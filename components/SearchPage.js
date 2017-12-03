@@ -45,7 +45,6 @@ export default class SearchPage extends Component<{}> {
     this.setState({ searchString: event.nativeEvent.text });
   };
   _executeQuery = (query) => {
-    console.log('query:',query);
     this.setState({ isLoading: true });
     fetch(query)
       .then(response => response.json())
@@ -62,9 +61,7 @@ export default class SearchPage extends Component<{}> {
   };
   _handleResponse = (response) => {
     this.setState({ isLoading: false, message: '' })
-    console.log(response.count);
     if (response.count > 1) {
-      console.log({recipes: response.hits})
       this.props.navigator.push({
         title: 'Results',
         component: SearchResults,
