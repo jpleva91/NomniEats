@@ -1,21 +1,37 @@
 import React, { Component } from "react";
-import { View, Button, Text } from "react-native";
+import { View, Button, Text, Image } from "react-native";
 import firebase from 'firebase';
 import TitledInput from "./TitledInput";
 import Spinner from './Spinner';
+import SearchPage from './SearchPage';
 
 export default class LoginForm extends Component<{}> {
-  state = { email: '', password: '', error: '', loading: false };
+
+  state = { email: '', password: '', error: '', loading: false, authenticated: false, user:'' };
   onLoginPress() {
     this.setState({ error: '', loading: true });
 
     const { email, password } = this.state;
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(() => { this.setState({ error: '', loading: false }); })
+      .then((res) => {
+        this.setState({ error: '', loading: false });
+        this.props.navigator.push({
+          title: 'NomniEats',
+          component: SearchPage,
+          passProps: {user: res}
+        });
+      })
       .catch(() => {
         //Login was not successful, let's create a new account
         firebase.auth().createUserWithEmailAndPassword(email, password)
-          .then(() => { this.setState({ error: '', loading: false }); })
+          .then((res) => {
+            this.setState({ error: '', loading: false });
+            this.props.navigator.push({
+              title: 'NomniEats',
+              component: SearchPage,
+              passProps: {user: this.state.user}
+            });
+          })
           .catch(() => {
             this.setState({ error: 'Authentication failed.', loading: false });
           });
@@ -29,7 +45,10 @@ export default class LoginForm extends Component<{}> {
   }
   render() {
     return(
-      <View>
+      <View style={styles.container}>
+      <Text style={styles.description}>
+        Search for recipes!
+      </Text>
         <TitledInput
           label='Email Address'
           placeholder='you@domain.com'
@@ -46,11 +65,33 @@ export default class LoginForm extends Component<{}> {
         />
         <Text style={styles.errorTextStyle}>{this.state.error}</Text>
         {this.renderButtonOrSpinner()}
+        <View style={styles.center}>
+        <Image source={require('../Resources/hungry-cat.png')} style={styles.image} />
+      </View>
       </View>
     );
   }
 }
 const styles ={
+  description: {
+    marginBottom: 20,
+    fontSize: 18,
+    textAlign: 'center',
+    color: '#656565'
+  },
+  container: {
+    padding: 30,
+    marginTop: 65,
+    flex: 1,
+  },
+  image: {
+    marginTop: 18,
+    width: 217,
+    height: 217,
+  },
+  center: {
+    alignItems: 'center',
+  },
   errorTextStyle: {
     color: '#E64A19',
     alignSelf: 'center',
