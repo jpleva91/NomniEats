@@ -14,6 +14,7 @@ import {
   Text,
   View,
   NavigatorIOS,
+  TabBarIOS,
 } from 'react-native';
 
 import Config from 'react-native-config';
@@ -22,6 +23,7 @@ import firebase from 'firebase';
 import LoginForm from './components/LoginForm';
 import SearchPage from './components/SearchPage';
 import RecipeView from './components/RecipeView';
+import TabBar from './components/TabBar';
 
 export default class App extends Component<{}> {
   componentWillMount() {
@@ -37,12 +39,13 @@ export default class App extends Component<{}> {
 
   render() {
     return (
-      <NavigatorIOS
-      style={styles.container}
-      initialRoute={{
-        title: 'Login',
-        component: LoginForm,
-      }}/>
+        <NavigatorIOS
+          style={styles.container}
+          initialRoute={{
+           title: 'Login',
+           component: LoginForm,
+        }}
+        navigationBarHidden={true} />
     );
   }
 }

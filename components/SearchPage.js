@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { API_KEY, APP_ID } from 'react-native-dotenv';
 import SearchResults from './SearchResults';
+import TabBar from './TabBar';
 
 let api = API_KEY;
 let app = APP_ID;
@@ -73,6 +74,7 @@ export default class SearchPage extends Component<{}> {
   }
 
   render() {
+    console.log(this.props)
     const spinner = this.state.isLoading ?
     <ActivityIndicator size ='large' /> : null;
     return (

@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import TitledInput from "./TitledInput";
 import Spinner from './Spinner';
 import SearchPage from './SearchPage';
+import TabBar from "./TabBar";
 
 export default class LoginForm extends Component<{}> {
 
@@ -14,10 +15,11 @@ export default class LoginForm extends Component<{}> {
     const { email, password } = this.state;
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then((res) => {
+        console.log(res);
         this.setState({ error: '', loading: false });
         this.props.navigator.push({
-          title: 'Search',
-          component: SearchPage,
+          title: 'Home',
+          component: TabBar,
           passProps: {user: res}
         });
       })
@@ -27,8 +29,8 @@ export default class LoginForm extends Component<{}> {
           .then((res) => {
             this.setState({ error: '', loading: false });
             this.props.navigator.push({
-              title: 'Search',
-              component: SearchPage,
+              title: 'Home',
+              component: TabBar,
               passProps: {user: this.state.user}
             });
           })
