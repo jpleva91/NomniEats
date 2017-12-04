@@ -52,7 +52,7 @@ export default class RecipeView extends Component<{}> {
         </View>
           <Button
             onPress={this._onRecipePressed}
-            color='#0C0A3E'
+            color='#F9564F'
             title='View Recipe'
           />  
         <View style={styles.separator}/> 
@@ -61,7 +61,7 @@ export default class RecipeView extends Component<{}> {
         <View style={styles.separator}/> 
         <Button
             onPress={this._onDeletePressed}
-            color='red'
+            color='#B33F62'
             title='Delete Recipe'
           />  
       </ScrollView>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: '#DDDDDD'
+    backgroundColor: '#F3C677'
   },
   image: {
     width: 420,

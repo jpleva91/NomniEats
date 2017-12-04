@@ -35,6 +35,7 @@ export default class IngredientConverter extends Component <{}> {
           url: this.props.recipe.url
       })
     })
+    this.props.navigator.popN(2);
   }
   _onVeganPressed = () => {
     let vegan = this.props.recipe;
@@ -126,7 +127,7 @@ export default class IngredientConverter extends Component <{}> {
         <View style={styles.rowContainer}>
           <Button
               onPress={this._onVeganPressed}
-              color='#0C0A3E'
+              color='#7B1E7A'
               title='Vegan'
             />
         </View>
@@ -134,7 +135,7 @@ export default class IngredientConverter extends Component <{}> {
         <View style={styles.rowContainer}>
           <Button
               onPress={this._onVegetarianPressed}
-              color='#0C0A3E'
+              color='#7B1E7A'
               title='Vegetarian'
             />
         </View>
@@ -142,15 +143,17 @@ export default class IngredientConverter extends Component <{}> {
         <View style={styles.rowContainer}>
           <Button
               onPress={this._onGlutenFreePressed}
-              color='#0C0A3E'
+              color='#7B1E7A'
               title='Gluten-Free'
             />
         </View>
         <View style={styles.separator}/>
+        <Text style={styles.label}>Ingredients</Text>
         <Text style={styles.ingredients}>{this.state.ingredientLine}</Text>
+        <View style={styles.separator}/>
         <Button
               onPress={this._onSavePressed}
-              color='#0C0A3E'
+              color='#F9564F'
               title='Save Recipe'
         />
       </ScrollView>
@@ -167,7 +170,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: '#DDDDDD'
+    backgroundColor: '#F3C677'
   },
   image: {
     width: 420,

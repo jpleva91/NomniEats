@@ -48,15 +48,16 @@ export default class RecipeView extends Component<{}> {
         </View>
           <Button
             onPress={this._onRecipePressed}
-            color='#0C0A3E'
+            color='#F9564F'
             title='View Recipe'
           />  
         <View style={styles.separator}/> 
         <Text style={styles.label}>Ingredients</Text>
         <Text style={styles.ingredients}>{ingredients}</Text>
+        <View style={styles.separator}/> 
           <Button
             onPress={this._onIngredientsPressed}
-            color='#0C0A3E'
+            color='#F9564F'
             title='Convert Ingredients'
           />  
       </ScrollView>
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: '#DDDDDD'
+    backgroundColor: '#F3C677'
   },
   image: {
     width: 420,
