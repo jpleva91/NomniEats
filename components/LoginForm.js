@@ -53,14 +53,14 @@ export default class LoginForm extends Component<{}> {
       </Text>
         <TitledInput
           label='Email Address'
-          placeholder='you@domain.com'
+          placeholder='YourEmailHere@Domain.com'
           value={this.state.email}
           onChangeText={email => this.setState({ email })}
         />
         <TitledInput
           label='Password'
           autoCorrect={false}
-          placeholder='*******'
+          placeholder='****************'
           secureTextEntry
           value={this.state.password}
           onChangeText={password => this.setState({ password })}
