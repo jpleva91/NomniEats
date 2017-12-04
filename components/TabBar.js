@@ -14,6 +14,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import SearchPage from './SearchPage';
 import LoginForm from './LoginForm';
 import UserRecipes from './UserRecipes';
+import UserProfile from './UserProfile';
 
 export default class TabBar extends Component<{}> {
   constructor(props) {
@@ -53,8 +54,8 @@ export default class TabBar extends Component<{}> {
           <NavigatorIOS
             style={styles.container}
             initialRoute={{
-              title: 'Search',
-              component: UserRecipes,
+              title: 'Welcome',
+              component: UserProfile,
               passProps: {user: this.props.user}
           }}/>
         </Icon.TabBarItemIOS>

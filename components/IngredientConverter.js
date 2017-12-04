@@ -30,7 +30,8 @@ export default class IngredientConverter extends Component <{}> {
           title: this.state.recipeLabel,
           healthLabels: this.props.recipe.healthLabels,
           ingredients: this.state.ingredientLine,
-          image: this.props.recipe.image
+          image: this.props.recipe.image,
+          url: this.props.recipe.url
       })
     })
   }
