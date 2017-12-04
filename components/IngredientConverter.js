@@ -126,7 +126,7 @@ export default class IngredientConverter extends Component <{}> {
         <View style={styles.rowContainer}>
           <Button
               onPress={this._onVeganPressed}
-              color='#48BBEC'
+              color='#0C0A3E'
               title='Vegan'
             />
         </View>
@@ -134,7 +134,7 @@ export default class IngredientConverter extends Component <{}> {
         <View style={styles.rowContainer}>
           <Button
               onPress={this._onVegetarianPressed}
-              color='#48BBEC'
+              color='#0C0A3E'
               title='Vegetarian'
             />
         </View>
@@ -142,7 +142,7 @@ export default class IngredientConverter extends Component <{}> {
         <View style={styles.rowContainer}>
           <Button
               onPress={this._onGlutenFreePressed}
-              color='#48BBEC'
+              color='#0C0A3E'
               title='Gluten-Free'
             />
         </View>
@@ -150,7 +150,7 @@ export default class IngredientConverter extends Component <{}> {
         <Text style={styles.ingredients}>{this.state.ingredientLine}</Text>
         <Button
               onPress={this._onSavePressed}
-              color='#48BBEC'
+              color='#0C0A3E'
               title='Save Recipe'
         />
       </ScrollView>
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     marginTop: 65,
   },
   heading: {
-    backgroundColor: '#F8F8F8'
+    backgroundColor: '#F3C677'
   },
   separator: {
     height: 1,
@@ -177,13 +177,13 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     margin: 5,
-    color: '#48BBEC'
+    color: '#F9564F'
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
     margin: 5,
-    color: '#656565'
+    color: '#F9564F'
   },
   rowContainer: {
     flexDirection: 'row',
@@ -195,6 +195,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     margin: 5,
-    color: '#656565'
+    color: '#0C0A3E'
   }
 });

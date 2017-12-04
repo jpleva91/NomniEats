@@ -26,9 +26,9 @@ export default class TabBar extends Component<{}> {
 
   render() {
     return (
-      <TabBarIOS selectedTab={this.state.selectedTab}>
+      <TabBarIOS selectedTab={this.state.selectedTab} barTintColor='#0C0A3E' tintColor='#F3C677'>
         <Icon.TabBarItemIOS
-          iconName="search" size={30} color="#900"
+          iconName="search"
           selected={this.state.selectedTab === 'searchPage'}
           onPress={() => {
             this.setState({
@@ -44,11 +44,11 @@ export default class TabBar extends Component<{}> {
         }}/>
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
-          iconName="user" size={30} color="#900"
-          selected={this.state.selectedTab === 'loginForm'}
+          iconName="user"
+          selected={this.state.selectedTab === 'userProfile'}
           onPress={() => {
             this.setState({
-              selectedTab: 'loginForm',
+              selectedTab: 'userProfile',
             });
           }}>
           <NavigatorIOS

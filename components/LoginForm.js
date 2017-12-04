@@ -57,7 +57,10 @@ export default class LoginForm extends Component<{}> {
     if(this.state.loading) {
       return <Spinner />;
     }
-    return <Button onPress={this.onLoginPress.bind(this)} title="Log in" />;
+    return <Button
+             onPress={this.onLoginPress.bind(this)} title="Login" 
+             color='#F9564F'
+           />;
   }
   render() {
     return(
@@ -92,7 +95,7 @@ const styles ={
   label: {
     fontSize: 25,
     fontWeight: 'bold',
-    color: '#48BBEC',
+    color: '#F9564F',
     textAlign: 'center',
     paddingBottom: 30,
   },

@@ -82,16 +82,16 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: '#dddddd'
+    backgroundColor: '#F3C677'
   },
   label: {
     fontSize: 25,
     fontWeight: 'bold',
-    color: '#48BBEC'
+    color: '#F9564F'
   },
   healthLabels: {
     fontSize: 20,
-    color: '#656565'
+    color: '#0C0A3E'
   },
   rowContainer: {
     flexDirection: 'row',

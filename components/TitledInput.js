@@ -29,7 +29,7 @@ const styles = {
     paddingRight: 5,
     paddingLeft: 5,
     paddingBottom: 2,
-    color: '#262626',
+    color: '#F9564F',
     fontSize: 18,
     fontWeight: '200',
     flex: 1,
@@ -37,7 +37,7 @@ const styles = {
 },
 labelStyle: {
     fontSize: 12,
-    color: '#7F7D7D',
+    color: '#0C0A3E',
     fontWeight: '200',
     flex: 1
 },
@@ -46,7 +46,7 @@ containerStyle: {
     flexDirection: 'column',
      alignItems: 'flex-start',
      width: '100%',
-     borderColor: '#D4D4D4',
+     borderColor: '#F3C677',
     borderBottomWidth: 1,
 }
 };

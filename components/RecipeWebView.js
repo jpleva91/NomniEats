@@ -50,6 +50,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontSize: 18,
     textAlign: 'center',
-    color: '#656565'
+    color: '#0C0A3E'
   },
 });

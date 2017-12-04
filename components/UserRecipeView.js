@@ -52,7 +52,7 @@ export default class RecipeView extends Component<{}> {
         </View>
           <Button
             onPress={this._onRecipePressed}
-            color='#48BBEC'
+            color='#0C0A3E'
             title='View Recipe'
           />  
         <View style={styles.separator}/> 
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     marginTop: 65
   },
   heading: {
-    backgroundColor: '#F8F8F8'
+    backgroundColor: '#F3C677'
   },
   separator: {
     height: 1,
@@ -88,17 +88,17 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     margin: 5,
-    color: '#48BBEC'
+    color: '#F9564F'
   },
   healthLabels: {
     fontSize: 18,
     margin: 5,
-    color: '#656565'
+    color: '#0C0A3E'
   },
   ingredients: {
     fontSize: 20,
     fontWeight: 'bold',
     margin: 5,
-    color: '#656565'
+    color: '#0C0A3E'
   }
 });

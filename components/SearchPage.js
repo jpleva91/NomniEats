@@ -81,7 +81,7 @@ export default class SearchPage extends Component<{}> {
     <ActivityIndicator size ='large' /> : null;
     return (
       <View style={styles.container}>
-        <Text style={styles.description}>
+        <Text style={styles.label}>
           Search for recipes!
         </Text>
         <Text style={styles.description}>
@@ -93,9 +93,10 @@ export default class SearchPage extends Component<{}> {
             value={this.state.searchString}
             onChange={this._onSearchTextChanged}
             placeholder='Search via food name or style' />
+          <View style={styles.separator}/>
           <Button
             onPress={this._onSearchPressed}
-            color='#48BBEC'
+            color='#F9564F'
             title='Go'
           />
         </View>
@@ -109,11 +110,18 @@ export default class SearchPage extends Component<{}> {
 
 
 const styles = StyleSheet.create({
+  label: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#F9564F',
+    textAlign: 'center',
+    paddingBottom: 30,
+  },
   description: {
     marginBottom: 20,
     fontSize: 18,
     textAlign: 'center',
-    color: '#656565'
+    color: '#0C0A3E'
   },
   container: {
     padding: 30,
@@ -132,12 +140,12 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     fontSize: 18,
     borderWidth: 1,
-    borderColor: '#48BBEC',
+    borderColor: '#F9564F',
     borderRadius: 8,
-    color: '#48BBEC',
+    color: '#0C0A3E',
   },
   image: {
-    marginTop: 18,
+    marginTop: 48,
     width: 217,
     height: 217,
   },

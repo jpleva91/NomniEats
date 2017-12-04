@@ -89,11 +89,11 @@ export default class UserRecipes extends Component<{}> {
     label: {
       fontSize: 25,
       fontWeight: 'bold',
-      color: '#48BBEC'
+      color: '#F9564F'
     },
     healthLabels: {
       fontSize: 20,
-      color: '#656565'
+      color: '#0C0A3E'
     },
     rowContainer: {
       flexDirection: 'row',
