@@ -19,18 +19,17 @@ class ListItem extends React.PureComponent {
 
   render() {
     const item = this.props.item;
-    console.log(item);
     return (
       <TouchableHighlight
         onPress={this._onPress}
         underlayColor='#dddddd'>
       <View>
         <View style={styles.rowContainer}>
-        <Image style={styles.thumb} source={{ url: item.image}} />
+        <Image style={styles.thumb} source={{ url: item.recipe.image}} />
         <View style={styles.textContainer}>
-          <Text style={styles.label}>{item.title}</Text>
+          <Text style={styles.label}>{item.recipe.title}</Text>
           <Text style={styles.healthLabels}
-            numberOfLines={3}>{" " + item.healthLabels.join(", ")}</Text>
+            numberOfLines={3}>{" " + item.recipe.healthLabels.join(", ")}</Text>
           </View>
         </View>
         <View style={styles.separator}/>

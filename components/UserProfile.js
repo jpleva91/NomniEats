@@ -28,7 +28,7 @@ export default class UserProfile extends Component<{}> {
     .catch(error =>
       this.setState({
         isLoading: false,
-        message: 'Something bad happened ' + error
+        message: 'No recipes found, please save a recipe!'
       }));
  };
  _onGoPressed = () => {
@@ -40,7 +40,11 @@ export default class UserProfile extends Component<{}> {
    if (response) {
      let userRecipes = [];
      for(let i = 0; i < Object.keys(response.recipes).length; i++){
-      userRecipes.push(response.recipes[Object.keys(response.recipes)[i]])
+      let recipe = {
+        ref: Object.keys(response.recipes)[i],
+        recipe: response.recipes[Object.keys(response.recipes)[i]]
+      }
+      userRecipes.push(recipe);
      }
      this.props.navigator.push({
        title: 'Your Recipes',

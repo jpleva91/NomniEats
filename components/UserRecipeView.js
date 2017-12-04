@@ -23,11 +23,25 @@ export default class RecipeView extends Component<{}> {
       }
     });
   };
+  _executeQuery = (uid,ref) => {
+    this.setState({ isLoading: true });
+    fetch(`https://nomnieats.firebaseio.com/${uid}/recipes/${ref}.json`, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      }
+    })
+    this.props.navigator.popN(2);
+   };
+  _onDeletePressed = () => {
+    console.log("Deleting",this.props.user.uid,this.props.recipe.ref)
+    this._executeQuery(this.props.user.uid, this.props.recipe.ref);
+  }
   
   render() {
-    const recipe = this.props.recipe;
+    const recipe = this.props.recipe.recipe;
     let healthLabels = recipe.healthLabels.join(', ')
-    console.log(recipe);
     return (
       <ScrollView>
         <Text style={styles.label}>{recipe.title}</Text>
@@ -44,6 +58,12 @@ export default class RecipeView extends Component<{}> {
         <View style={styles.separator}/> 
         <Text style={styles.label}>Ingredients</Text>
         <Text style={styles.ingredients}>{recipe.ingredients}</Text>
+        <View style={styles.separator}/> 
+        <Button
+            onPress={this._onDeletePressed}
+            color='red'
+            title='Delete Recipe'
+          />  
       </ScrollView>
     );
   }
