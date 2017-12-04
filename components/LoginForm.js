@@ -106,8 +106,8 @@ const styles ={
   },
   image: {
     marginTop: 18,
-    width: 380,
-    height: 217,
+    width: 417,
+    height: 267,
   },
   center: {
     alignItems: 'center',
