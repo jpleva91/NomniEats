@@ -27,12 +27,25 @@ export default class LoginForm extends Component<{}> {
         //Login was not successful, let's create a new account
         firebase.auth().createUserWithEmailAndPassword(email, password)
           .then((res) => {
+            let user = res.uid;
             this.setState({ error: '', loading: false });
-            this.props.navigator.push({
-              title: 'Home',
-              component: TabBar,
-              passProps: {user: this.state.user}
-            });
+            fetch(`https://nomnieats.firebaseio.com/${res.uid}/.json/`, {  
+              method: 'PUT',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                email: res.email
+              })
+            })
+            .then((res)=> {
+              this.props.navigator.push({
+                title: 'Home',
+                component: TabBar,
+                passProps: {user: this.state.user}
+              });
+            })
           })
           .catch(() => {
             this.setState({ error: 'Authentication failed.', loading: false });
@@ -60,7 +73,7 @@ export default class LoginForm extends Component<{}> {
         <TitledInput
           label='Password'
           autoCorrect={false}
-          placeholder='****************'
+          placeholder='**********'
           secureTextEntry
           value={this.state.password}
           onChangeText={password => this.setState({ password })}

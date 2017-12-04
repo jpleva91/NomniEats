@@ -66,7 +66,10 @@ export default class SearchPage extends Component<{}> {
       this.props.navigator.push({
         title: 'Results',
         component: SearchResults,
-        passProps: {recipes: response.hits}
+        passProps: {
+          recipes: response.hits,
+          user: this.props.user
+        }
       });
     } else {
       this.setState({ message: 'Input not recognized; please try again.'});
@@ -74,7 +77,6 @@ export default class SearchPage extends Component<{}> {
   }
 
   render() {
-    console.log(this.props)
     const spinner = this.state.isLoading ?
     <ActivityIndicator size ='large' /> : null;
     return (

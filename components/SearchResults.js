@@ -53,7 +53,10 @@ export default class SearchResults extends Component <{}> {
       this.props.navigator.push({
         title: "Recipe",
         component: RecipeView,
-        passProps: {recipe: this.props.recipes[index]}
+        passProps: {
+          recipe: this.props.recipes[index],
+          user: this.props.user
+        }
       });
     };
 

@@ -17,14 +17,20 @@ export default class RecipeView extends Component<{}> {
     this.props.navigator.push({
       title: "Recipe Web View",
       component: RecipeWebView,
-      passProps: {recipe: this.props.recipe.recipe}
+      passProps: {
+        recipe: this.props.recipe.recipe,
+        user: this.props.user
+      }
     });
   };
   _onIngredientsPressed = () => {
     this.props.navigator.push({
       title: "Ingredient Converter",
       component: IngredientConverter,
-      passProps: {recipe: this.props.recipe.recipe}
+      passProps: {
+        recipe: this.props.recipe.recipe,
+        user: this.props.user
+      }
     });
   }
   

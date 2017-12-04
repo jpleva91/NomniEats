@@ -15,9 +15,25 @@ export default class IngredientConverter extends Component <{}> {
   constructor(props) {
     super(props);
     this.state = {
+        recipeLabel: this.props.recipe.label,
         ingredientLine: this.props.recipe.ingredientLines.join('\n\n'),
     }
-}
+  }
+  _onSavePressed = () => {
+    fetch(`https://nomnieats.firebaseio.com/${this.props.user.uid}/recipes/.json`, {  
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          title: this.state.recipeLabel,
+          healthLabels: this.props.recipe.healthLabels,
+          ingredients: this.state.ingredientLine,
+          image: this.props.recipe.image
+      })
+    })
+  }
   _onVeganPressed = () => {
     let vegan = this.props.recipe;
     let isVegan = false;
@@ -44,7 +60,7 @@ export default class IngredientConverter extends Component <{}> {
     let newRecipe = [];
     vegetarian.ingredientLines.forEach(ingredientLine => {
      ingredientLine.split(' ').forEach(word => {
-       if(word.toUpperCase() === "DRUMSTICKS" || word.toUpperCase() === "QUARTERED" || word.toUpperCase() === "HALVES," || word.toUpperCase() === "TENDERS" || word.toUpperCase() === "SIRLOIN" || word.toUpperCase() === "POUNDS" || word.toUpperCase() === "POUND" || word.toUpperCase() === "HALVES" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "PIECES" || word.toUpperCase() === "BONELESS," || word.toUpperCase() === "ON" || word.toUpperCase() === "SKIN" || word.toUpperCase() === "BREASTS," || word.toUpperCase() === "THIGHS," || word.toUpperCase() === "(THIGHS" || word.toUpperCase() === "WHOLE" || word.toUpperCase() === "BREASTS" || word.toUpperCase() === "BONELESS" || word.toUpperCase() === "(BONELESS)" || word.toUpperCase() === "SKINLESS"|| word.toUpperCase() === "BREAST" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "THIGHS" || word.toUpperCase() === "WINGS," || word.toUpperCase() === "WINGS" || word.toUpperCase() === "AND" || word.toUpperCase() === "SKIN-ON"|| word.toUpperCase() === "SKIN-ON,"||word.toUpperCase() === "FILLETS" || word.toUpperCase() === "FILLETED" || word.toUpperCase() === "FILET"||  word.toUpperCase() === "FILLET" || word.toUpperCase() === "LEGS" || word.toUpperCase() === "LEGS)")
+       if(word.toUpperCase() === "DRUMSTICKS" || word.toUpperCase() === "QUARTERED" || word.toUpperCase() === "HALVES," || word.toUpperCase() === "TENDERS" || word.toUpperCase() === "SIRLOIN" || word.toUpperCase() === "POUNDS" || word.toUpperCase() === "POUND" || word.toUpperCase() === "HALVES" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "PIECES" || word.toUpperCase() === "BONELESS," || word.toUpperCase() === "SKIN" || word.toUpperCase() === "BREASTS," || word.toUpperCase() === "THIGHS," || word.toUpperCase() === "(THIGHS" || word.toUpperCase() === "WHOLE" || word.toUpperCase() === "BREASTS" || word.toUpperCase() === "BONELESS" || word.toUpperCase() === "(BONELESS)" || word.toUpperCase() === "SKINLESS"|| word.toUpperCase() === "BREAST" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "THIGHS" || word.toUpperCase() === "WINGS," || word.toUpperCase() === "WINGS" || word.toUpperCase() === "AND" || word.toUpperCase() === "SKIN-ON"|| word.toUpperCase() === "SKIN-ON,"||word.toUpperCase() === "FILLETS" || word.toUpperCase() === "FILLETED" || word.toUpperCase() === "FILET"||  word.toUpperCase() === "FILLET" || word.toUpperCase() === "LEGS" || word.toUpperCase() === "LEGS)")
        {
          word = "";
        }
@@ -67,6 +83,7 @@ export default class IngredientConverter extends Component <{}> {
     })
     newRecipe.join('');
     this.setState({
+      recipeLabel: "(Vegetarian)" + this.state.recipeLabel,
       ingredientLine: newRecipe
     })
   }
@@ -126,6 +143,11 @@ export default class IngredientConverter extends Component <{}> {
         </View>
         <View style={styles.separator}/>
         <Text style={styles.ingredients}>{this.state.ingredientLine}</Text>
+        <Button
+              onPress={this._onSavePressed}
+              color='#48BBEC'
+              title='Save Recipe'
+        />
       </ScrollView>
     );
   }
