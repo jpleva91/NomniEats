@@ -15,6 +15,7 @@ export default class IngredientConverter extends Component <{}> {
   constructor(props) {
     super(props);
     this.state = {
+        editLabel: false,
         recipeLabel: this.props.recipe.label,
         ingredientLine: this.props.recipe.ingredientLines.join('\n\n'),
     }
@@ -83,8 +84,11 @@ export default class IngredientConverter extends Component <{}> {
      newRecipe.push('\n\n');
     })
     newRecipe.join('');
+    if(!this.state.editLabel) {
+      this.state.editLabel = true;
+      this.state.recipeLabel = "(Vegetarian)" + this.state.recipeLabel;
+    }
     this.setState({
-      recipeLabel: "(Vegetarian)" + this.state.recipeLabel,
       ingredientLine: newRecipe
     })
   }

@@ -28,7 +28,7 @@ export default class LoginForm extends Component<{}> {
         firebase.auth().createUserWithEmailAndPassword(email, password)
           .then((res) => {
             let user = res.uid;
-            this.setState({ error: '', loading: false });
+            this.setState({ error: '', loading: false, user: res });
             fetch(`https://nomnieats.firebaseio.com/${res.uid}/.json/`, {  
               method: 'PUT',
               headers: {
@@ -40,6 +40,7 @@ export default class LoginForm extends Component<{}> {
               })
             })
             .then((res)=> {
+              console.log(this.state.user);
               this.props.navigator.push({
                 title: 'Home',
                 component: TabBar,
