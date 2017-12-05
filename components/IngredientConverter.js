@@ -63,6 +63,10 @@ export default class IngredientConverter extends Component <{}> {
     let newRecipe = [];
     vegetarian.ingredientLines.forEach(ingredientLine => {
      ingredientLine.split(' ').forEach(word => {
+       if(word.toUpperCase() === "EGG" || word.toUpperCase() === "EGGS") 
+       {
+        word = "vegetarian egg replacer"
+       }
        if(word.toUpperCase() === "GROUND") 
        {
          word = "chopped"
@@ -79,7 +83,11 @@ export default class IngredientConverter extends Component <{}> {
        {
          word= "large"
        }
-       if(word.toUpperCase() === "SKIRT" || word.toUpperCase() === "LOIN" || word.toUpperCase() === "TOP" || word.toUpperCase() === "YORK" || word.toUpperCase() === "NEW" || word.toUpperCase() === "STRIP" || word.toUpperCase() === "TIPS" || word.toUpperCase() === "BONELESS)," || word.toUpperCase() === "(BONE-IN" || word.toUpperCase() === "ROUND" || word.toUpperCase() === "EYE" || word.toUpperCase() === "TIED" || word.toUpperCase() === "PRIME" || word.toUpperCase() === "ROAST)" || word.toUpperCase() === "(CHUCK" || word.toUpperCase() === "CHUCK" || word.toUpperCase() === "POT" || word.toUpperCase() === "BONES" || word.toUpperCase() === "MEAT" || word.toUpperCase() === "THIGH" || word.toUpperCase() === "CUTLETS" || word.toUpperCase() === "REMOVED" || word.toUpperCase() === "BONE" || word.toUpperCase() === "1/2-TO-4-LB." || word.toUpperCase() === "4-LB" || word.toUpperCase() === "DRUMSTICKS" || word.toUpperCase() === "(900G)" || word.toUpperCase() === "2-POUNDS" || word.toUpperCase() === "1-POUND" || word.toUpperCase() === "DRUMSTICKS" || word.toUpperCase() === "QUARTERED" || word.toUpperCase() === "HALVES," || word.toUpperCase() === "TENDERS" || word.toUpperCase() === "BONELESS)" || word.toUpperCase() === "POUNDS" || word.toUpperCase() === "POUND" || word.toUpperCase() === "HALVES" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "PIECES" || word.toUpperCase() === "BONELESS," || word.toUpperCase() === "SKIN" || word.toUpperCase() === "BREASTS," || word.toUpperCase() === "THIGHS," || word.toUpperCase() === "(THIGHS" || word.toUpperCase() === "WHOLE" || word.toUpperCase() === "BREASTS" || word.toUpperCase() === "BONELESS" || word.toUpperCase() === "(BONELESS)" || word.toUpperCase() === "SKINLESS"|| word.toUpperCase() === "BREAST" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "THIGHS" || word.toUpperCase() === "WINGS," || word.toUpperCase() === "WINGS" || word.toUpperCase() === "AND" || word.toUpperCase() === "SKIN-ON"|| word.toUpperCase() === "SKIN-ON,"||word.toUpperCase() === "FILLETS" || word.toUpperCase() === "FILLETED" || word.toUpperCase() === "FILET"||  word.toUpperCase() === "FILLET" || word.toUpperCase() === "LEGS" || word.toUpperCase() === "LEGS)")
+       if(word.toUpperCase() === "OF")
+       {
+         word= "or"
+       }
+       if(word.toUpperCase() === "HARD-BOILED" || word.toUpperCase() === "CENTER-CUT" || word.toUpperCase() === "BUTCHER" || word.toUpperCase() === "YOUR" || word.toUpperCase() === "TENDERLOIN" || word.toUpperCase() === "LEAN" || word.toUpperCase() === "SHELL" || word.toUpperCase() === "FLANK" || word.toUpperCase() === "RIB-EYE" || word.toUpperCase() === "SKIRT" || word.toUpperCase() === "LOIN" || word.toUpperCase() === "TOP" || word.toUpperCase() === "YORK" || word.toUpperCase() === "NEW" || word.toUpperCase() === "STRIP" || word.toUpperCase() === "TIPS" || word.toUpperCase() === "BONELESS)," || word.toUpperCase() === "(BONE-IN" || word.toUpperCase() === "ROUND" || word.toUpperCase() === "EYE" || word.toUpperCase() === "TIED" || word.toUpperCase() === "PRIME" || word.toUpperCase() === "ROAST)" || word.toUpperCase() === "(CHUCK" || word.toUpperCase() === "CHUCK" || word.toUpperCase() === "POT" || word.toUpperCase() === "BONES" || word.toUpperCase() === "MEAT" || word.toUpperCase() === "THIGH" || word.toUpperCase() === "CUTLETS" || word.toUpperCase() === "REMOVED" || word.toUpperCase() === "BONE" || word.toUpperCase() === "1/2-TO-4-LB." || word.toUpperCase() === "4-LB" || word.toUpperCase() === "DRUMSTICKS" || word.toUpperCase() === "(900G)" || word.toUpperCase() === "2-POUNDS" || word.toUpperCase() === "1-POUND" || word.toUpperCase() === "DRUMSTICKS" || word.toUpperCase() === "QUARTERED" || word.toUpperCase() === "HALVES," || word.toUpperCase() === "TENDERS" || word.toUpperCase() === "BONELESS)" || word.toUpperCase() === "POUNDS" || word.toUpperCase() === "POUND" || word.toUpperCase() === "HALVES" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "PIECES" || word.toUpperCase() === "BONELESS," || word.toUpperCase() === "SKIN" || word.toUpperCase() === "BREASTS," || word.toUpperCase() === "THIGHS," || word.toUpperCase() === "(THIGHS" || word.toUpperCase() === "WHOLE" || word.toUpperCase() === "BREASTS" || word.toUpperCase() === "BONELESS" || word.toUpperCase() === "(BONELESS)" || word.toUpperCase() === "SKINLESS"|| word.toUpperCase() === "BREAST" || word.toUpperCase() === "BONE-IN" || word.toUpperCase() === "THIGHS" || word.toUpperCase() === "WINGS," || word.toUpperCase() === "WINGS" || word.toUpperCase() === "AND" || word.toUpperCase() === "SKIN-ON"|| word.toUpperCase() === "SKIN-ON,"||word.toUpperCase() === "FILLETS" || word.toUpperCase() === "FILLETED" || word.toUpperCase() === "FILET"||  word.toUpperCase() === "FILLET" || word.toUpperCase() === "LEGS" || word.toUpperCase() === "LEGS)")
        {
          word = "";
        }
@@ -89,7 +97,7 @@ export default class IngredientConverter extends Component <{}> {
           Math.floor(Math.random() * (chickenSubs.length))
          ];
        }
-       if (word.toUpperCase() === "RIB-EYE" || word.toUpperCase() === "STEAKS" || word.toUpperCase() === "SIRLOIN" || word.toUpperCase() === "ROAST," ||word.toUpperCase() === "ROAST" || word.toUpperCase() === "BEEF" || word.toUpperCase() === "BEEF," || word.toUpperCase() === "STEAK" || word.toUpperCase() === "STEAK," || word.toUpperCase() === "MIGNON")
+       if (word.toUpperCase() === "BRISKET" || word.toUpperCase() === "STEAKS" || word.toUpperCase() === "SIRLOIN" || word.toUpperCase() === "ROAST," ||word.toUpperCase() === "ROAST" || word.toUpperCase() === "BEEF" || word.toUpperCase() === "BEEF," || word.toUpperCase() === "STEAK" || word.toUpperCase() === "STEAK," || word.toUpperCase() === "MIGNON")
        {
         word = beefSubs[
           Math.floor(Math.random() * (beefSubs.length))
