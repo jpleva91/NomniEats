@@ -25,4 +25,4 @@ I would like to work on creating functionality within the app that would suggest
 ### Recipe View
 ![Recipe-View](https://github.com/jpleva91/NomniEats/blob/master/ScreenShots/RecipeView.png)
 ### User Page
-![User](https://github.com/jpleva91/NomniEats/blob/master/ScreenShots/UserPAge.png)
+![User](https://github.com/jpleva91/NomniEats/blob/master/ScreenShots/UserPage.png)
