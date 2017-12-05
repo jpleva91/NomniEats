@@ -1,6 +1,5 @@
 # WDI5 Project 4 (NomniEats)
 
-
 ## Getting Started
 1. Fork or clone this repo
 2. In terminal: 
